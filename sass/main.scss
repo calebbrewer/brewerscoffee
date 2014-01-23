@@ -1,0 +1,274 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   SCSS Imports
+   ========================================================================== */
+@import "_normalize";
+@import "_vars";
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    font-family: 'Oxygen', sans-serif;
+    color: $darkGray;
+    font-size: 1em;
+    line-height: 1.4;
+    height: 101%;
+    background-color: $white;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    color: $white;
+    background: $blue;
+    text-shadow: none;
+}
+
+::selection {
+    color: $white;
+    background: $blue;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $lightGray;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: $lightGray;
+    color: $darkGray;
+    padding: $pad 0;
+}
+
+/* ==========================================================================
+   H tags
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $pad;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+/*=================*/
+b, strong {
+    font-weight: $bold;
+}
+
+a {
+    color: $blue;
+}
+
+p {
+    margin-bottom: $pad;
+}
+
+//Center some stuff
+.logo, .openMainNav, .mainNav, main {
+    margin: 0 auto;
+}
+
+header {
+    margin-top: $pad;
+
+    .logo {
+        display: block;
+        text-indent: -9999px;
+        background: url("/img/bcLogo.svg");
+        background-repet: none;
+        @extend .center;
+    }
+
+    .no-svg .logo {
+        background: url("/img/bcLogo.png"); 
+    }
+
+    nav {
+        .openMainNav { //This is a <ul> tag
+            li {
+                float: left;
+                list-style-type: none;
+                width: 50%;
+                background-color: $darkGray;
+            }
+        }
+
+        .mainNav { //This is a <ul> tag
+            li.odd {
+                border-right: 0.1em solid $darkGray;
+            }
+
+            li.below {
+                border-top: 0.1em solid $darkGray;
+            }            
+
+            li {
+                float: left;
+                list-style-type: none;
+                width: 50%;
+            }
+
+        }
+    }
+}
+
+main {
+    pading: $pad;
+
+    ul {
+        li {
+            ul {
+                li {
+
+                }
+            }
+
+        }
+    }
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   More SCSS Imports
+   ========================================================================== */
+@import "_helpers";
